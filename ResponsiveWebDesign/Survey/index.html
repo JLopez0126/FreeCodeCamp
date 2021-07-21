@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style media="screen">
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            font-size: 1.6rem;
+            line-height: 1.5;
+            text-align: center;
+            color: #333;
+            margin: 0;
+            background:url('https://wallpapercave.com/wp/1PFHyYy.jpg');
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+
+        #survey-form{
+          margin: 0 auto;
+          width:65%;
+          background: #ADD8E6;
+
+          text-align:left;
+          padding:40px;
+          font-family: sans-serif;
+          font-size: 1.2rem;
+          line-height: 1.2;
+          border-radius:15px;
+        }
+            .radio, .checkbox{
+               display: inline-block;
+              margin-right: 0.625rem;
+              min-height: 1.25rem;
+              min-width: 1.25rem;
+      }
+      #profile {
+          line-height: 1.8;
+      }
+      .comment {
+        margin: 0 auto;
+              }
+      .textinput {
+          float: left;
+          width: 100%;
+          min-height: 75px;
+          outline: none;
+          resize: none;
+          border: 1px solid grey;
+      }
+      #email{
+        margin-left: 4px;
+      }
+      #number {
+        margin-left: 17px;
+      }
+
+      </style>
+    <meta charset="utf-8">
+    <title>Survey Page</title>
+  </head>
+  <body>
+      <main>
+          <h1 id="title">Survey Form</h1>
+          <p id="description"> Thank you for taking the time to help us improve the platform </p>
+
+          <form id="survey-form" class="" action="index.html" method="post">
+            <div id="profile">
+              <label id="name-label" for="name">Name</label>
+              <input id="name" type="text" name="name" value="" placeholder="Enter Your Name" required><br>
+              <label id="email-label" for="email">Email</label>
+              <input id="email" type="email" name="email" type="email" value="" placeholder="Enter Email address" required><br>
+              <label id="number-label" for="age">Age</label>
+              <input id="number" type="number" name="age" value="" required min="1" max="100" placeholder="Age">
+            </div>
+
+            <!-- dropdown -->
+            <p>What Is your current position</p>
+            <select id="dropdown" name="cars">
+              <option value="Sr.Dev">Sr. Developer</option>
+              <option value="Jr.Dev">Jr. Developer</option>
+              <option value="Intern">Intern</option>
+              <option value="FullStack">Full stack Developer</option>
+            </select>
+            <!-- radio -->
+              <div>
+                <p>Would you recommend freeCodeCamp to a friend?</p>
+                  <input class="radio" type="radio"  name="recommend" value="male">
+                 <label for="male">Definitely</label><br>
+                 <input class="radio" type="radio" name="recommend" value="female">
+                 <label for="female">Maybe</label><br>
+                 <input class="radio" type="radio"  name="recommend" value="other">
+                 <label for="other">Not sure</label><br><br>
+              </div>
+
+             <!-- checkbox -->
+             <div>
+                  <p>What would you like to see improved? (Check all that apply)</p>
+                   <input class="checkbox" type="checkbox" id="frond-end"  value="frond-end-projects">
+                  <label for="font-end"> Front-end Projects</label><br>
+                  <input class="checkbox" type="checkbox" id="back-end"  value="back-end-projects">
+                  <label for="back-end"> Back-end Projects</label><br>
+                  <input class="checkbox" type="checkbox" id="data-v"  value="data-visualization">
+                  <label for="data-v"> Data Visualization</label><br>
+                  <input class="checkbox" type="checkbox" id="challenges"  value="challenges">
+                  <label for="challenges"> Challenges</label><br>
+                  <input class="checkbox" type="checkbox" id="osc"  value="open-source-community">
+                  <label for="osc"> Open Source Community</label><br>
+                  <input class="checkbox" type="checkbox" id="gitter-help" value="gitter-help-rooms">
+                  <label for="gitter-help"> Gitter help rooms</label><br>
+                  <input class="checkbox" type="checkbox" id="videos"  value="videos">
+                  <label for="videos"> Videos</label><br>
+                  <input class="checkbox" type="checkbox" id="meetup"  value="city-meetups">
+                  <label for="meetup"> City Meetups</label><br>
+                  <input class="checkbox" type="checkbox" id="wiki"  value="wiki">
+                  <label for="wiki"> Wiki</label><br>
+                  <input class="checkbox" type="checkbox" id="forum"  value="forum">
+                  <label for="forum"> Forum</label><br>
+              </div>
+              <div class="comment">
+                <label for="comment">Enter your suggestions.</label><br>
+                <textarea class="textinput" name="comment" rows="8" cols="80" placeholder="Enter Here.."></textarea>
+              </div>
+              <button id="submit" type="submit" name="submit">Submit</button>
+          </form>
+      </main>
+      <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
+</html>
